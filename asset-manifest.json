@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.86ca737a.css",
+    "main.js": "/portfolio/static/js/main.ca0fb1e4.js",
+    "static/media/05.png": "/portfolio/static/media/05.5539cfab43e60210bcd5.png",
+    "static/media/01.png": "/portfolio/static/media/01.35f16e6e819e83ba8d65.png",
+    "static/media/lemon.png": "/portfolio/static/media/lemon.c372cfe62b0f0fb9d2b9.png",
+    "static/media/memeApp.mp4": "/portfolio/static/media/memeApp.0cc3abcf4adbcda9d33e.mp4",
+    "static/media/weatherApp.mp4": "/portfolio/static/media/weatherApp.f93276838d73e068c1b0.mp4",
+    "static/media/02.png": "/portfolio/static/media/02.fda523a9a181653a0dee.png",
+    "static/media/todoApp.mp4": "/portfolio/static/media/todoApp.9a7663d2ead4795b2291.mp4",
+    "static/media/06.png": "/portfolio/static/media/06.d730538fe6825469b899.png",
+    "static/media/githubBlackLogo.png": "/portfolio/static/media/githubBlackLogo.00c601f1724a126c1cbd.png",
+    "static/media/03.png": "/portfolio/static/media/03.3c2526fc37c682005a64.png",
+    "static/media/javascriptLogo.png": "/portfolio/static/media/javascriptLogo.92169892ea013a5154bd.png",
+    "static/media/04.png": "/portfolio/static/media/04.c4b7cf9989c4bbb5e6df.png",
+    "static/media/webLogo.png": "/portfolio/static/media/webLogo.79ae6f47bfa68b5ffc86.png",
+    "static/media/nodejsLogo.png": "/portfolio/static/media/nodejsLogo.aa8bc616bb8252fa29f3.png",
+    "static/media/employeeApp.mp4": "/portfolio/static/media/employeeApp.8c1a1a7ce5e488557866.mp4",
+    "static/media/pythonLogo.png": "/portfolio/static/media/pythonLogo.640caeb928aeff6a880c.png",
+    "static/media/youtubeLogo.png": "/portfolio/static/media/youtubeLogo.5accd050b16f68b4f2f2.png",
+    "static/media/reactLogo.png": "/portfolio/static/media/reactLogo.1e5639fdfd7c944093d3.png",
+    "static/media/sassLogo.png": "/portfolio/static/media/sassLogo.eae2b96dc5f29556b225.png",
+    "static/media/reactRouterLogo.png": "/portfolio/static/media/reactRouterLogo.4af214a2a376349fdbee.png",
+    "static/media/flaskLogo.png": "/portfolio/static/media/flaskLogo.8d9a8084ded5c6d5a255.png",
+    "static/media/pandasLogo.png": "/portfolio/static/media/pandasLogo.f0e05c189be6e09bc566.png",
+    "index.html": "/portfolio/index.html",
+    "main.86ca737a.css.map": "/portfolio/static/css/main.86ca737a.css.map",
+    "main.ca0fb1e4.js.map": "/portfolio/static/js/main.ca0fb1e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86ca737a.css",
+    "static/js/main.ca0fb1e4.js"
+  ]
+}
