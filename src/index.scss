@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+:root {
+	// Setting up color scheme
+	--yellow-default: #FFC700;
+	--yellow-dark: 	#EAB600;
+	--yellow-darker:#D9A90D;
+	--yellow-light: #FFD230;
+	--bg: var(--yellow-default);
+	--text-color: black;
+	// Font
+	--default-font: 'Roboto Condensed';
+	// Other variables
+	--def-side-margin: 4rem;
+	@media screen and (max-width: 1000px) {--def-side-margin: 1rem;}
+	// Creating a custom units
+	--custom-unit: 3.4vw;
+	--custom-unit-2: 3.4vw;
+	@media screen and (min-width: 750px) {--custom-unit-2: 1.5rem}
+	@media screen and (min-width: 450px) {--custom-unit: 1rem}
+}
+
+// Custom-Font
+@mixin custom-font {color: var(--bg); -webkit-text-stroke: .8px black;}
+
+html, body {
+	// reset code
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg);
+	font-family: var(--default-font);
+}
+body {padding-bottom: 3rem;}
+
+// Utility classes
+.flex {display: flex;}
+.grid {display: flex;}
+.display-none {display: none;}
+
+// Actual styles
+
+// About me section 
+
+.lines-on-top {
+	hr {
+		background-color: black;
+		color: black;
+		border: none;
+		outline: none;
+		height: 1px;
+		position: absolute;
+		width: calc(100vw - calc(var(--def-side-margin) * 2));
+		left: var(--def-side-margin);
+	}
+	hr:first-child {top: 0;} // if i dont specify the top the hr will stick to the div after lines-on-top
+	hr:nth-child(2) {width: 1.5rem; transform: rotate(90deg); top: .8rem; left: calc(var(--def-side-margin) + 3rem);}
+	hr:last-child {width: 78vw; top: 1.5rem;}
+	@media screen and (min-width: 1000px) {hr:last-child {width: calc(100vw - calc(var(--def-side-margin) * 2))}}
+}
+
+.primary-text {
+	margin-top: 3rem;
+	margin-left: var(--def-side-margin);
+	font-weight: bold;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.headers-container {width: calc(var(--custom-unit) * 20)}
+.first-header {font-size: calc(var(--custom-unit) * 4.3);}
+.second-header {@include custom-font; font-size: calc(var(--custom-unit) * 2.2);}
+.about-me {
+font-size: calc(var(--custom-unit) * 1.4);
+width: calc(var(--custom-unit) * 25);
+margin-right: var(--def-side-margin)
+}
+
+.lemon-img {width: 20rem; opacity: 0.7;}
+.lemon-img:hover {opacity: 1;}
+@media screen and (max-width: 1228px) {.lemon-container {display: none;}}
+
+.links-container {align-items: center; gap: 1rem; img {width: 2rem}}
+
+// Skills section
+
+
+$skillLogoWidth: calc(var(--custom-unit-2) * 3.2);
+$firstBannerWrapperWidth: calc(var(--custom-unit-2) * 27);
+$firstBannerWidth: calc(var(--custom-unit-2) * 16);
+
+.skills-container {margin-left: var(--def-side-margin); margin-top: 5rem; place-items: center; justify-content: space-between;}
+.skills-header {font-size: calc(var(--custom-unit-2) * 1.5)}
+.skill-banner-wrapper {margin-top: 2rem}
+.skill-banner, .skill-sub-banner {gap: calc(var(--custom-unit-2) * 1.8); place-items: center; border-radius: 0 20px 20px 0;}
+.skill-banner {background-color: var(--yellow-dark); z-index: 2}
+.skill-sub-banner {
+	background-color: var(--yellow-light);
+	padding-top: .2rem; padding-bottom: .2rem; // Because of place-items: center on parent div
+	margin-left: calc(-1 * var(--custom-unit-2) * 1.2);
+	img:first-child {margin-left: calc(var(--custom-unit-2) * 1.8);}
+}
+.skill-logo {width: $skillLogoWidth; z-index: 2}
+.CSS-logo {scale: 0.88}
+.Javascript-logo {margin-left: .2rem}
+
+.first-banner-wrapper {
+	//width: $firstBannerWrapperWidth;
+	.skill-banner {width: $firstBannerWidth;}
+	.skill-sub-banner {width: calc($firstBannerWrapperWidth - $firstBannerWidth)}
+}
+
+.second-banner-wrapper {.skill-banner {width: $firstBannerWidth;}}
+.third-banner-wrapper {.skill-banner {width: calc($firstBannerWidth * 2/3)}}
+
+
+/*I'm putting it on top of left space on window in order to make skills invisible on all different screens*/
+.yellow-block {
+	position: absolute;
+	height: calc($skillLogoWidth + 1rem);
+	width: var(--def-side-margin);
+	left: 0;
+	z-index: 1;
+	background-color: var(--bg); 
+}
+
+.skill-description-container {margin-top: 5rem; margin-right: 5rem; gap: 2rem; align-items: center;}
+.skill-description-logo {width: 150px;}
+.skill-description-text {p {width: 10rem}}
+.skill-description-placeholder {font-size: 3rem; opacity: 0.5; cursor: default; &:hover {opacity: 0.7}}
+.skill-description-empty-box {width: 10px; height: 10px; @media screen and (max-width: 1050px) {display: none;}}
+@media screen and (max-width: 750px) {.skill-description-container {display: none}}
+
+@media screen and (max-width: 1000px) {
+	.skills-container {justify-content: flex-start;}
+	.skill-description-container {margin-top: 10rem; position: absolute; right: 0; width: 20rem; margin-right: 0;}
+	.skill-description-text {p {width: 8rem;}}
+	.skill-sub-banner {transform: translateX(0) !important;}
+}
+
+// Projects section
+
+.projects-container {margin-left: calc(var(--custom-unit-2) * 1.2); margin-top: 5rem;}
+
+.youtube-container {margin-top: 3rem;}
+.youtube-header-top, .youtube-header-paragraph {font-size: 1.5rem;}
+.youtube-project-slide-container {overflow: hidden;}
+.youtube-ss-container {
+	margin-top: 1rem; // for debugging
+	display: grid;
+	height: 135vw;
+	align-items: center; 
+	background-color: var(--yellow-dark);
+	width: 92.88vw;
+}
+.youtube-ss {width: inherit;}
+.youtube-navigate-to-left {left: calc(3.44vw + 10px); transform: rotate(180deg)}
+.youtube-navigate-to-right {right: calc(3.44vw + 10px)}
+.youtube-navigate-to-left, .youtube-navigate-to-right {
+	position: absolute;
+	width: 1.8rem;
+	margin-top: 71.6vw;
+	opacity: 0.5;
+	cursor: pointer;
+	z-index: 2;
+	&:hover {opacity: 0.8;}
+}
+.youtube-ss-container-wrapper {gap: calc(var(--custom-unit-2) * 1.2)}
+
+.youtube-project-collage-container {
+	height: 31rem;
+	align-items: baseline;
+	margin-top: .3rem;
+	.youtube-collage-row {gap: 1rem}
+	.youtube-ss1 {width: 15.8rem;}
+	.youtube-ss2 {width: 10rem;}
+	.youtube-ss3 {width: 12.6rem;}
+	.youtube-ss4 {width: 9rem; position: relative; bottom: 3rem}
+	.youtube-ss5 {width: 15.9rem; position: relative; bottom: 3rem}
+	.youtube-ss6 {width: 13.5rem;}
+	@media screen and (max-width: 715px) {.youtube-ss3, .youtube-ss6 {display: none} .youtube-ss4, .youtube-ss5 {top: 0;}}
+}
+.youtube-logos {
+	justify-content: center;
+	place-items: center;
+	margin-top: -1rem;
+	img {width: 6rem; &:last-child {margin-left: 2rem;}}
+}
+.youtube-collage-grand-parent {justify-content: center;}
+@media screen and (max-width: 475px) {.youtube-project-collage-container {display: none}}
+@media screen and (min-width: 475px) {
+	.youtube-project-slide-container {display: none}
+	.youtube-project-collage-container-parent {margin-left: 16vw; justify-content: center}
+}
+@media screen and (max-width: 1090px) {
+	.youtube-collage-grand-parent	{margin-top: 1rem;}
+	.youtube-header-paragraph {display: none} .youtube-logos {display: none;}
+}
+@media screen and (min-width: 1090px) {
+	.youtube-container {display: flex; flex-direction: row-reverse; gap: 2rem; justify-content: left;}
+	.youtube-collage-grand-parent {margin-right: 1rem;}
+	.youtube-text {margin-top: 10rem; max-width: 47vw; width: 100%}
+	.youtube-description {max-width: 41.5rem;}
+	.youtube-header-paragraph {margin-top: 4rem;}
+	.youtube-header-top {display: none}
+}
+@media screen and (min-width: 1360px) {	.youtube-collage-parent {width: 47vw; justify-content: center;}}
+
+.project-header {font-size: 1.5rem}
+.project-video {width: 92.88vw}
+.project-description {width: 92.88vw}
+.project-links {
+	gap: 1.5rem; 
+	img {width: 1.8rem;} 
+	a {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		text-decoration: none;
+		color: black;
+		background-color: var(--yellow-dark);
+		padding: .3rem;
+		border-radius: 5px;
+		&:hover {background-color: var(--yellow-darker);}
+	}
+}
+
+@media screen and (min-width: 950px) {
+	.video-projects-container {display: flex; flex-wrap: wrap; gap: 1.5vw;}
+	.project-video {width: 47vw;}
+	.project-description {width: 47vw}
+}
