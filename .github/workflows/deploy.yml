@@ -52,6 +52,7 @@ jobs:
         run: |
               git lfs install
               git lfs track "*.glb"
+              git add .gitattributes
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
