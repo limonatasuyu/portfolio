@@ -19,10 +19,7 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
-
-      - name: Fetch Git LFS files
-        run: git lfs fetch --all
-
+      
       - name: Build project
         run: npm run build
 
@@ -39,6 +36,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Fetch Git LFS files
+        run: git lfs fetch --all
+      
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
