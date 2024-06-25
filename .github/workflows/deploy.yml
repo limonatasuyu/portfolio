@@ -12,13 +12,9 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           lfs: true  # Ensure LFS files are checked out
-          fetch-depth: 0  # Fetch all history to ensure LFS objects are available
-
-      - name: Setup Git LFS
-        run: git lfs pull
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -48,12 +44,6 @@ jobs:
           name: production-files
           path: ./dist
       
-      - name:
-        run: |
-              git lfs install
-              git lfs track "*.glb"
-              git add .gitattributes
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
