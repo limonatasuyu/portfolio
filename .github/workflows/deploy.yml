@@ -49,7 +49,7 @@ jobs:
           path: ./dist
       
       - name:
-        uses: |
+        run: |
               git lfs install
               git lfs track "*.glb"
 
