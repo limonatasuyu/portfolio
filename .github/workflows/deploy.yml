@@ -55,7 +55,7 @@ jobs:
           sudo apt-get install git-lfs
           git lfs install
           git lfs track ".glb"
-          git lfs migrate import --include="*.glb"
+          git lfs ls-files
 
       - name: Download artifact
         uses: actions/download-artifact@v3
