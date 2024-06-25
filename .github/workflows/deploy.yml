@@ -14,12 +14,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
+          lfs: true  # Ensure LFS files are checked out
           fetch-depth: 0  # Fetch all history to ensure LFS objects are available
 
       - name: Setup Git LFS
-        run: |
-          git lfs install
-          git lfs fetch --all
+        run: git lfs pull
 
       - name: Setup Node
         uses: actions/setup-node@v4
