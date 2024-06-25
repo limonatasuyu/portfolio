@@ -1,5 +1,5 @@
 import { useGLTF } from "@react-three/drei";
-import island from "/assets/models/chicken_gun_pirateislands.glb";
+import island from "../../public/assets/models/chicken_gun_pirateislands.glb";
 import CityIsland from "./islandGroup/CityIsland";
 import CastleIsland from "./islandGroup/CastleIsland";
 import Clouds from "./islandGroup/Clouds";
