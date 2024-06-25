@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
-import ship from "../../public/assets/models/tz_pirate_ship_recolored.gb.glb"
+import ship from "/assets/models/tz_pirate_ship_recolored.gb.glb"
 import { useMove } from "../contexts/movingContext"
 
 export default function Ship(props) { 

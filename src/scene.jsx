@@ -1,13 +1,14 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { Euler, Quaternion } from "three";
 import ShipWrapper from "./models/shipWrapper";
-import { Physics } from "@react-three/cannon";
+import { Physics, Debug } from "@react-three/cannon";
 import Destination from "./models/destinationPoint";
 import WaterComponent from "./models/water";
 import SkyComponent from "./models/sky";
 import IslandGroup from "./models/islandGroup";
 import { useEffect } from "react";
 import { Pages } from "./pages/Pages";
+import { OrbitControls } from "@react-three/drei";
 
 const initialCameraRotation = new Euler(-0.38, -0.21, -0.1);
 
@@ -39,6 +40,7 @@ export default function Scene() {
         <SkyComponent />
         <IslandGroup />
         <ShipWrapper />
+        <OrbitControls />
         <CameraSetup />
         {Pages.map((i, x) => (
           <Destination key={x} position={i.position} />
