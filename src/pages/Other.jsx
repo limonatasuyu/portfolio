@@ -21,9 +21,9 @@ export default function Others() {
   });
 
   const soundCloudLinks = [
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1850500875&color=%23ff5500&a  uto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1900979226&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
     "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1810300698&color=%23ff5500&a  uto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
-    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1784613393&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1886937558&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
   ];
 
   return (
